@@ -19,6 +19,11 @@ public abstract class BasePresenter<T extends View> implements Presenter {
         }
     }
 
+    @Override
+    public void onDestory() {
+
+    }
+
     protected T getView() {
         return view != null ? view.get() : null;
     }

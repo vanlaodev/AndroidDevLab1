@@ -12,13 +12,11 @@ import dagger.android.support.DaggerAppCompatActivity;
 
 public abstract class BaseActivity<T extends Presenter> extends DaggerAppCompatActivity implements View {
 
-    private String id;
-
-    @Inject
-    Map<String, Presenter> presenterMap;
-
     @Inject
     protected T presenter;
+    @Inject
+    Map<String, Presenter> presenterMap;
+    private String id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +38,9 @@ public abstract class BaseActivity<T extends Presenter> extends DaggerAppCompatA
     protected void onDestroy() {
         super.onDestroy();
         presenter.unbindView();
+        if (isFinishing()) {
+            presenter.onDestory();
+        }
     }
 
     @Override
