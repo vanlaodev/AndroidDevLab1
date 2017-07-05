@@ -1,9 +1,7 @@
 package com.github.vanlaodev.daggerandroidlab1;
 
 import android.os.Bundle;
-
-import java.util.Map;
-import java.util.UUID;
+import android.support.v4.app.FragmentManager;
 
 import javax.inject.Inject;
 
@@ -12,41 +10,38 @@ import dagger.android.support.DaggerAppCompatActivity;
 
 public abstract class BaseActivity<T extends Presenter> extends DaggerAppCompatActivity implements View {
 
+    public static final String KEY_PRESENTER = "presenter";
+    private static final String TAG_LIFECYCLE_DATA_HOLDER = "lifecycle_data_holder";
     @Inject
     protected T presenter;
-    @Inject
-    Map<String, Presenter> presenterMap;
-    private String id;
+
+    private LifecycleDataHolder lifecycleDataHolder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (savedInstanceState == null) {
-            id = UUID.randomUUID().toString();
-        } else {
-            id = savedInstanceState.getString("id", UUID.randomUUID().toString());
+        FragmentManager fm = getSupportFragmentManager();
+        lifecycleDataHolder = (LifecycleDataHolder) fm.findFragmentByTag(TAG_LIFECYCLE_DATA_HOLDER);
+        if (lifecycleDataHolder == null) {
+            lifecycleDataHolder = new LifecycleDataHolder();
+            fm.beginTransaction().add(lifecycleDataHolder, TAG_LIFECYCLE_DATA_HOLDER).commit();
         }
-        if (!presenterMap.containsKey(id)) {
-            presenterMap.put(id, presenter);
+        T savedPresenter = (T) lifecycleDataHolder.getData(KEY_PRESENTER);
+        if (savedPresenter != null) {
+            presenter = savedPresenter;
         } else {
-            presenter = (T) presenterMap.get(id);
+            lifecycleDataHolder.putData(KEY_PRESENTER, presenter);
         }
         presenter.bindView(this);
     }
 
     @Override
     protected void onDestroy() {
-        super.onDestroy();
         presenter.unbindView();
         if (isFinishing()) {
             presenter.onDestory();
         }
-    }
-
-    @Override
-    protected void onSaveInstanceState(Bundle outState) {
-        outState.putString("id", id);
-        super.onSaveInstanceState(outState);
+        super.onDestroy();
     }
 
     @Override
