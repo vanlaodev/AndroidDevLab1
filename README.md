@@ -1,2 +1,2 @@
-# DaggerAndroidLab1
-Dagger2 + RxAndroid + MVP
+# AndroidDevLab1
+Dagger2 + RxJava2 + MVP
