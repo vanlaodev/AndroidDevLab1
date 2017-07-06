@@ -1,6 +1,6 @@
-package com.github.vanlaodev.daggerandroidlab1.login;
+package com.github.vanlaodev.androiddevlab1.login;
 
-import com.github.vanlaodev.daggerandroidlab1.View;
+import com.github.vanlaodev.androiddevlab1.View;
 
 public interface LoginView extends View {
     void setUsernameError();

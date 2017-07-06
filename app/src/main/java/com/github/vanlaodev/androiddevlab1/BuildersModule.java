@@ -1,9 +1,9 @@
-package com.github.vanlaodev.daggerandroidlab1;
+package com.github.vanlaodev.androiddevlab1;
 
-import com.github.vanlaodev.daggerandroidlab1.login.LoginActivity;
-import com.github.vanlaodev.daggerandroidlab1.login.LoginModule;
-import com.github.vanlaodev.daggerandroidlab1.main.MainActivity;
-import com.github.vanlaodev.daggerandroidlab1.main.MainModule;
+import com.github.vanlaodev.androiddevlab1.login.LoginActivity;
+import com.github.vanlaodev.androiddevlab1.login.LoginModule;
+import com.github.vanlaodev.androiddevlab1.main.MainActivity;
+import com.github.vanlaodev.androiddevlab1.main.MainModule;
 
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;

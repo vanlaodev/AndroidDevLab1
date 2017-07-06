@@ -1,4 +1,4 @@
-package com.github.vanlaodev.daggerandroidlab1.main;
+package com.github.vanlaodev.androiddevlab1.main;
 
 import dagger.Binds;
 import dagger.Module;

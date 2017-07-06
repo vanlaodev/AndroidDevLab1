@@ -1,4 +1,4 @@
-package com.github.vanlaodev.daggerandroidlab1;
+package com.github.vanlaodev.androiddevlab1;
 
 import android.content.Context;
 import android.content.SharedPreferences;

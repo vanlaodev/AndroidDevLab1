@@ -1,4 +1,4 @@
-package com.github.vanlaodev.daggerandroidlab1.login;
+package com.github.vanlaodev.androiddevlab1.login;
 
 import dagger.Binds;
 import dagger.Module;

@@ -1,4 +1,4 @@
-package com.github.vanlaodev.daggerandroidlab1.login;
+package com.github.vanlaodev.androiddevlab1.login;
 
 import android.content.Context;
 import android.content.Intent;
@@ -6,12 +6,10 @@ import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.github.vanlaodev.daggerandroidlab1.AuthenticatedActivity;
-import com.github.vanlaodev.daggerandroidlab1.BaseActivity;
-import com.github.vanlaodev.daggerandroidlab1.LoadingDialogFragment;
-import com.github.vanlaodev.daggerandroidlab1.Presenter;
-import com.github.vanlaodev.daggerandroidlab1.R;
-import com.github.vanlaodev.daggerandroidlab1.main.MainActivity;
+import com.github.vanlaodev.androiddevlab1.BaseActivity;
+import com.github.vanlaodev.androiddevlab1.LoadingDialogFragment;
+import com.github.vanlaodev.androiddevlab1.R;
+import com.github.vanlaodev.androiddevlab1.main.MainActivity;
 
 import butterknife.BindView;
 import butterknife.OnClick;

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Dagger Android Lab1</string>
+    <string name="app_name">Android Dev Lab1</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="login">Login</string>

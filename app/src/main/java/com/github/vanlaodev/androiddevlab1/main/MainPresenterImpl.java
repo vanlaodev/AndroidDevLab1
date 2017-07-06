@@ -1,7 +1,7 @@
-package com.github.vanlaodev.daggerandroidlab1.main;
+package com.github.vanlaodev.androiddevlab1.main;
 
-import com.github.vanlaodev.daggerandroidlab1.BasePresenter;
-import com.github.vanlaodev.daggerandroidlab1.UserDataStore;
+import com.github.vanlaodev.androiddevlab1.BasePresenter;
+import com.github.vanlaodev.androiddevlab1.UserDataStore;
 
 import javax.inject.Inject;
 

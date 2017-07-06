@@ -1,6 +1,6 @@
-package com.github.vanlaodev.daggerandroidlab1;
+package com.github.vanlaodev.androiddevlab1;
 
-import com.github.vanlaodev.daggerandroidlab1.login.LoginActivity;
+import com.github.vanlaodev.androiddevlab1.login.LoginActivity;
 
 import javax.inject.Inject;
 

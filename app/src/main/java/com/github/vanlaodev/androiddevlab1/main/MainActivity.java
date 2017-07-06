@@ -1,12 +1,12 @@
-package com.github.vanlaodev.daggerandroidlab1.main;
+package com.github.vanlaodev.androiddevlab1.main;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.github.vanlaodev.daggerandroidlab1.AuthenticatedActivity;
-import com.github.vanlaodev.daggerandroidlab1.R;
-import com.github.vanlaodev.daggerandroidlab1.login.LoginActivity;
+import com.github.vanlaodev.androiddevlab1.AuthenticatedActivity;
+import com.github.vanlaodev.androiddevlab1.R;
+import com.github.vanlaodev.androiddevlab1.login.LoginActivity;
 
 import butterknife.OnClick;
 

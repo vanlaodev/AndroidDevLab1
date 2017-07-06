@@ -1,4 +1,4 @@
-package com.github.vanlaodev.daggerandroidlab1;
+package com.github.vanlaodev.androiddevlab1;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
