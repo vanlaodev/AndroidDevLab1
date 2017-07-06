@@ -7,7 +7,7 @@ import android.support.v4.app.Fragment;
 import java.util.HashMap;
 import java.util.Map;
 
-public class LifecycleDataHolder extends Fragment {
+public class ActivityDataHolder extends Fragment {
 
     private final Map<String, Object> data = new HashMap<>();
 
